@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="240dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_rounded_white">
+
+    <TextView
+        android:id="@+id/dialog_title_size"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Size"
+        android:layout_margin="12dp"
+        android:textAlignment="center"
+        android:textColor="@color/black" />
+
+    <LinearLayout
+        android:id="@+id/dialog_sizes_layout"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialog_title_size"
+        android:layout_marginTop="12dp">
+
+        <EditText
+            android:id="@+id/dialogWidth"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:padding="12dp"
+            android:background="@drawable/bg_rounded_grey"
+            android:hint="width" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_margin="4dp"
+            android:text="X" />
+
+
+        <EditText
+            android:id="@+id/dialogHeight"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="12dp"
+            android:inputType="number"
+            android:background="@drawable/bg_rounded_grey"
+            android:hint="height" />
+
+    </LinearLayout>
+    
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/dialogCancel"
+        android:layout_width="120dp"
+        android:layout_marginTop="12dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialog_sizes_layout"
+        android:background="@drawable/bg_left_bottom_round"
+        android:text="Cancel"
+        android:textAllCaps="false"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="120dp"
+        android:id="@+id/dialogOk"
+        android:layout_marginTop="12dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialog_sizes_layout"
+        android:layout_toEndOf="@id/dialogCancel"
+        android:background="@drawable/bg_right_bottom_round"
+        android:text="OK"
+        android:textAllCaps="false"/>
+    <View
+        android:layout_width="1dp"
+        android:elevation="4dp"
+        android:layout_alignTop="@id/dialogCancel"
+        android:layout_alignBottom="@id/dialogCancel"
+        android:background="@color/white"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/dialogCancel"/>
+
+</RelativeLayout>
